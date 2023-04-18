@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: Helvetica;
+}
+
+.calculadora {
+    position: absolute;
+    width: 500px;
+    background-color: rgb(255 255 255);
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2rem;
+    border-radius: 10%;
+    box-shadow: 1px 1px 10px #000;
+}
+
+#tela {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+    box-shadow: 1px 1px 5px #000;
+    text-align: right;
+}
+
+#previous-operations,
+#current-operations {
+    overflow-wrap: break-word;    
+    min-height: .6em;
+}
+
+#previous-operations {
+    color: #777;
+}
+
+#current-operations {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.btn-calc {
+    display: grid;
+    /* fr é o quão flexivel é uma caixa */
+    grid-template-columns: repeat(4, .1fr);
+    justify-content: center;
+    gap: 1rem;
+    width: 90%;
+    margin: 3rem auto 0 auto;
+}
+
+/* grid template area define como os elemento vão se posicionar */
+
+.btn-calc button {
+    display: inline-block;
+    width: 70px;
+    border-radius: 100%;
+    padding: .9rem;
+    font-size: 1.4rem;
+    background-color: #eeececb0;
+    border: none;
+    box-shadow: 1px 1px 10px #000;
+    transform: scale(1);
+    transition: .4s ease;
+    cursor: pointer;
+}
+
+.btn-calc button:active {
+    transform: scale(.9);
+    box-shadow: inset 1px 1px 10px #000;
+}
+
+.btn-calc #zero {
+    grid-column: 2;
+}
+
+.operators {
+    color: #2ea516;
+
+}
+.operators#clear {
+    color: #f30606;
+}    
+#result {
+    grid-row: span 2;
+    border-radius: 30%;
+}
