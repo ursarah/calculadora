@@ -10,7 +10,7 @@
 .calculadora {
     position: absolute;
     width: 500px;
-    background-color: rgb(255 255 255);
+    background-image: linear-gradient(#fff, #ffe5ec,#fb6f92);
     top: 50px;
     left: 50%;
     transform: translateX(-50%);
@@ -56,12 +56,11 @@
 /* grid template area define como os elemento vão se posicionar */
 
 .btn-calc button {
-    display: inline-block;
+    display: inline;
     width: 70px;
     border-radius: 100%;
     padding: .9rem;
     font-size: 1.4rem;
-    background-color: #eeececb0;
     border: none;
     box-shadow: 1px 1px 10px #000;
     transform: scale(1);
@@ -74,18 +73,21 @@
     box-shadow: inset 1px 1px 10px #000;
 }
 
-.btn-calc #zero {
-    grid-column: 2;
+.number {
+    background-color: #ffe5ec;
 }
 
 .operators {
-    color: #2ea516;
-
+    color: #0000008c;
+    background-color: #ff8fab;
 }
+
 .operators#clear {
     color: #f30606;
 }    
-#result {
-    grid-row: span 2;
-    border-radius: 30%;
+
+.operators#result {
+    width: 150px;
+    grid-column: span 2;
+    border-radius: 20%;
 }

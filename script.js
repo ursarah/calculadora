@@ -1,5 +1,3 @@
-const prevOpText = document.querySelector("#previous-operations")
-const currOpText = document.querySelector("#current-operations")
 
 const buttons = [
     {
@@ -14,7 +12,7 @@ const buttons = [
     },
 
     {
-        nameB: '/',
+        nameB: 'C',
         classB: 'operators',
     },
 
@@ -79,27 +77,25 @@ const buttons = [
     },
 
     {
-        nameB: '=',
-        idB: 'result',
+        nameB: '/',
         classB: 'operators',
-    },
-
-    {
-        nameB: 'C',
-        classB: 'operators',
-    },
-
-    {
-        nameB: '0',
-        idB: 'zero',
-        classB: 'number',
     },
 
     {
         nameB: ',',
         classB: 'operators',
-    }
+    },
+    
+    {
+        nameB: '0',
+        classB: 'number',
+    },
 
+    {
+        nameB: '=',
+        idB: 'result',
+        classB: 'operators',
+    },
 ]
 
 buttons.forEach(button=>{

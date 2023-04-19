@@ -15,7 +15,8 @@ X 2- pegar os ids e fazer cada um ter um valor
 3- Number() ou só colocar um + é a mesma coisa
 4- transfoma uma string em array
 */
-
+const prevOpText = document.querySelector("#previous-operations")
+const currOpText = document.querySelector("#current-operations") 
 const clickButts = document.querySelectorAll("#divButtons button")
 
 class Calculator {
@@ -83,7 +84,7 @@ class Calculator {
                 this.processClearEvery()
                 break
             case "=":
-                this.processEqual()
+                this.processEqual(operationsvalue)
                 break
             default:
                 return
@@ -138,8 +139,11 @@ class Calculator {
     }
 
     // 8 - Dar o resultado
-    processEqual() {
-        
+    processEqual(operationsvalue) {
+        this.prevOpText.innerHTML = ""
+        this.currOpText.innerHTML = ""
+
+        this.currOpText = operationsvalue
     }
 }
 
